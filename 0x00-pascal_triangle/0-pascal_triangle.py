@@ -1,4 +1,8 @@
+#!/usr/bin/env python3
+"""Prints the pascal triangle"""
+
 def pascal_triangle(n):
+    """Function to print the triangle"""
     triangle = []
     if (n == 0):
         return triangle
