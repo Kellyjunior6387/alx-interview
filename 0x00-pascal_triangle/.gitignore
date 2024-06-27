@@ -1,0 +1,2 @@
+//Dont track main*.py beacuse they are test files
+main*.py
