@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from collections import deque
 """Function to check if all boxes can be opened"""
+from collections import deque
 
 
 def canUnlockAll(boxes):
