@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function to check if all 
+"""Function to check if all
 boxes can be opened"""
 from collections import deque
 
