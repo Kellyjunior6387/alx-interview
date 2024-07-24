@@ -29,7 +29,7 @@ def validUTF8(data: List[int]) -> bool:
         if bytes == 0:
             return False
         for j in range(1, bytes):
-            if i + j >= len(data) or not continuation(i + j):
+            if i + j >= len(data) or not continuation(data[i + j]):
                 return False
         i += bytes
     return True
