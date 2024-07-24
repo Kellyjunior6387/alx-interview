@@ -23,6 +23,8 @@ def continuation(byte: int) -> int:
 def validUTF8(data: List[int]) -> bool:
     i = 0
     while i < len(data):
+        if not isinstance(data[i], int):
+            return False 
         bytes = numberOfBytes(data[i])
         if bytes == 0:
             return False
