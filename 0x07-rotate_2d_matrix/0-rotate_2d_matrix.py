@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Module to implement a function that rotate a matrix"""
-from typing import List
 
 
 def transpose(matrix):
@@ -16,7 +15,7 @@ def transpose(matrix):
     return matrix
 
 
-def rotate_2d_matrix(matrix: List[any]) -> List[any]:
+def rotate_2d_matrix(matrix):
     """A function to rotate a matrix"""
     transposed_matrix = transpose(matrix)
     for row in transposed_matrix:
