@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module to implement a function that rotate a matrix"""
 from typing import List
 
