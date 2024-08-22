@@ -11,6 +11,6 @@ def makeChange(coins: List[int], total: int) -> int:
     table[0] = 0
     for i in range(1, total+1):
         for coin in coins:
-            if (i - coin) > -1:
+            if (i - coin) >= 0:
                 table[i] = min(table[i], table[i-coin] + 1)
     return table[total] if table[total] != total+1 else -1
