@@ -7,6 +7,8 @@ def makeChange(coins: List[int], total: int) -> int:
     """Function that determine fewest number of coins
     to make change
     """
+    if total <= 0:
+        return 0
     table = [total+1 for _ in range(total+1)]
     table[0] = 0
     for i in range(1, total+1):
