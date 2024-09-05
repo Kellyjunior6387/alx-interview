@@ -21,14 +21,24 @@ def isWinner(x, nums):
         return None
     max_n = max(nums) if nums else 0
     primes = sieve_of_erastosthenes(max_n)
+    prime_count_up_to = [0] * (max_n + 1)
+    for i in range(1, max_n + 1):
+        prime_count_up_to[i] = prime_count_up_to[i - 1] + (1 if primes[i] else 0)
+
     maria = 0
     ben = 0
+
     for n in nums:
-        count = sum(primes[2:n+1])
+        if n == 1:  # Special case: if n is 1, Ben automatically wins
+            ben += 1
+            continue
+
+        count = prime_count_up_to[n]  # Get number of primes up to n
         if count % 2 == 1:
             maria += 1
         else:
             ben += 1
+
     if maria > ben:
         return 'Maria'
     elif ben > maria:
