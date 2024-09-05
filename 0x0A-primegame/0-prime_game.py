@@ -17,14 +17,15 @@ def sieve_of_erastosthenes(n: int):
 
 def isWinner(x, nums):
     """Function to simulate prime geam winner"""
+    max_n = max(nums)
+    primes = sieve_of_erastosthenes(max_n)
     maria = 0
     ben = 0
     for n in nums:
-        primes = sieve_of_erastosthenes(n)
         count = sum(primes[2:n+1])
         if count % 2 == 1:
             maria += 1
-        elif count % 2 == 0:
+        else:
             ben += 1
     if maria > ben:
         return 'Maria'
