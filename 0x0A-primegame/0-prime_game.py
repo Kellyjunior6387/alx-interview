@@ -23,7 +23,8 @@ def isWinner(x, nums):
     primes = sieve_of_erastosthenes(max_n)
     prime_count_up_to = [0] * (max_n + 1)
     for i in range(1, max_n + 1):
-        prime_count_up_to[i] = prime_count_up_to[i - 1] + (1 if primes[i] else 0)
+        prime_count_up_to[i] = prime_count_up_to[i - 1] + (1
+                                                           if primes[i] else 0)
 
     maria = 0
     ben = 0
