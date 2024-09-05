@@ -17,7 +17,9 @@ def sieve_of_erastosthenes(n: int):
 
 def isWinner(x, nums):
     """Function to simulate prime geam winner"""
-    max_n = max(nums)
+    if x == 0 or not nums:  # No rounds to play
+        return None
+    max_n = max(nums) if nums else 0
     primes = sieve_of_erastosthenes(max_n)
     maria = 0
     ben = 0
